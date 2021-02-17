@@ -8,17 +8,9 @@ import static org.hamcrest.Matchers.is;
 
 public class SimpleTest {
     @Test
-    @Tag("positive")
     @DisplayName("Some positive test")
     void successWithHamcrestAndStepsTest() {
         step("Assert that true is true", () ->
                 assertThat(true, is(true)));
-    }
-
-    @Test
-    @DisplayName("Some negative test")
-    void negativeWithHamcrestAndStepsTest() {
-        step("Assert that true is false", () ->
-                assertThat(true, is(false)));
     }
 }
